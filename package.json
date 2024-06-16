@@ -1,5 +1,5 @@
 {
-  "name": "simple-next",
+  "name": "better-tech-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,11 +13,16 @@
     "@types/node": "^20.10.4",
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
+    "antd": "^5.18.1",
     "aos": "^3.0.0-beta.6",
+    "classnames": "^2.5.1",
     "next": "^14.0.4",
+    "next-auth": "^4.24.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^5.2.1",
+    "react-lite-month-picker": "^1.2.18",
+    "recharts": "^2.12.7",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
