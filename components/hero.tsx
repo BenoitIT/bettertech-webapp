@@ -27,7 +27,7 @@ export default function Hero() {
           <div className="text-center pb-12 md:pb-16">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Better Technology <span className="bg-clip-text text-transparent bg-emerald-700">Limited.</span></h1>
             <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Your Trusted Partner in Incineration, Clinical Material Repair, and RVM Solutions. Let's pave the way towards a cleaner, safer future together.</p>
+              <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Your Trusted Partner in Incineration, Clinical Machines Repair, and RVM Solutions. Let's pave the way towards a cleaner, safer future together.</p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
                   <Link href="/#contact" className="btn text-white bg-emerald-700 hover:bg-green-900 w-full mb-4 sm:w-auto sm:mb-0">Talk to us</Link>

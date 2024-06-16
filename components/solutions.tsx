@@ -38,7 +38,7 @@ export default function Solutions() {
             <h1 className="h2 mb-4">Explore the solutions</h1>
             <p className="text-lg text-gray-600">
               Discover innovative solutions to modern challenges: Incineration,
-              Clinical Material Repair, and RVM Solutions, each designed to
+              Clinical Machines Repair, and RVM Solutions, each designed to
               improve efficiency and sustainability in your operations.
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function Solutions() {
                 <h3 className="h3 mb-3 text-xl">Our Leading Solutions</h3>
                 <p className="text-base text-gray-600">
                   From cutting-edge Incineration techniques ,expertse in
-                  Clinical Materials reparation and advanced plastics recyling
+                  Clinical Machiness reparation and advanced plastics recyling
                   solutions, we provide innovative and effective solutions
                   tailored to meet your unique needs.
                 </p>
@@ -98,11 +98,11 @@ export default function Solutions() {
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1 text-base">
-                      Clinical Material Repair
+                      Clinical Machines Repair
                     </div>
                     <div className="text-gray-600 text-sm">
                       Ensure the longevity and functionality of medical
-                      equipment with our expert clinical material repair
+                      equipment with our expert clinical Machines repair
                       services. We specialize in restoring and maintaining a
                       wide range of medical instruments, ensuring they meet
                       health and safety standards, and supporting optimal
