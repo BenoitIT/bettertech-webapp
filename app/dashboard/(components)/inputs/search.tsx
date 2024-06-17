@@ -1,8 +1,8 @@
 import { LuSearch } from "react-icons/lu";
 import { LuType } from "react-icons/lu";
-const SearchInput = ({placeholder}:any) => {
+const SearchInput = ({placeholder,value,onClick,onChange}:any) => {
   return (
-    <form className="flex justify-start lg:w-2/4 w-full">
+    <form className="flex justify-start lg:w-2/4 w-full" onSubmit={onClick}>
       <div className="relative w-full">
         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
           <LuType />
@@ -11,6 +11,8 @@ const SearchInput = ({placeholder}:any) => {
           type="text"
           className="bg-gray-50 border border-emerald-700 text-gray-900 text-sm rounded-lg  block w-full ps-10 p-2.3 focus:outline-none "
           placeholder={placeholder}
+          value={value}
+          onChange={(e)=>onChange(e.target.value)}
           required
         />
       </div>

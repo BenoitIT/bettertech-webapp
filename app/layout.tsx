@@ -1,32 +1,32 @@
+import "./css/style.css";
 
-import './css/style.css'
-
-import { Inter } from 'next/font/google'
-import { SessionProvider } from 'next-auth/react'
+import { Inter } from "next/font/google";
+import AuthSessionProvider from "./providers/sessionProvider";
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap'
-})
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata = {
-  title: 'Better Technology Ltd',
-  description: 'Better technology ltd',
-}
+  title: "Better Technology Ltd",
+  description: "Better technology ltd",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-inter antialiased bg-white text-gray-900 tracking-tight`}>
+      <body
+        className={`${inter.variable} font-inter antialiased bg-white text-gray-900 tracking-tight`}
+      >
         <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-          {children}
-  
+          <AuthSessionProvider>{children}</AuthSessionProvider>
         </div>
       </body>
     </html>
-  )
+  );
 }

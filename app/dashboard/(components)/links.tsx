@@ -1,8 +1,7 @@
 import { TbMessage2Bolt } from "react-icons/tb";
 import { MdSubscriptions } from "react-icons/md";
-import { CiSettings } from "react-icons/ci";
+import { CgProfile } from "react-icons/cg";
 import { MdDashboardCustomize } from "react-icons/md"
-import { RxDashboard } from "react-icons/rx";
 import { FaUsers } from "react-icons/fa";
 import { SiGithubactions } from "react-icons/si";
 import { TbTransactionDollar } from "react-icons/tb";
@@ -35,9 +34,9 @@ export const adminHomeMenu = {
 };
 export const profileAndSupportLinks = [
   {
-    name: "Settings",
+    name: "Profile",
     path: "/dashboard/profile",
-    icon: <CiSettings />,
+    icon: <CgProfile />,
   },
   {
     name: "Subscribers",

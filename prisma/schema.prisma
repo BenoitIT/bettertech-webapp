@@ -1,0 +1,74 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int    @id @unique @default(autoincrement())
+  firstName   String
+  lastName    String
+  password    String
+  email       String @unique
+  role        String @default("user")
+  phoneNumber String
+}
+
+model Client {
+  id          Int           @id @unique @default(autoincrement())
+  clientNames String
+  email       String        @unique
+  phoneNumber String
+  clientType  String
+  industry    String
+  province    String
+  district    String
+  transaction transaction[]
+}
+
+model activity {
+  id           Int           @id @unique @default(autoincrement())
+  activityName String        @unique
+  requirements String[]
+  price        Int
+  transaction  transaction[]
+}
+
+model transaction {
+  id           Int      @id @unique @default(autoincrement())
+  client       Client   @relation(fields: [clientId], references: [id])
+  activity     activity @relation(fields: [actId], references: [id])
+  clientId     Int
+  actId        Int
+  quantity     Int
+  unit         String   @default("")
+  amountEarned Int
+  status       String   @default("unpaid")
+  doneAt       String
+}
+
+model Messages {
+  id        Int      @id @unique @default(autoincrement())
+  email     String
+  firstName String
+  lastName  String
+  subject   String
+  message   String
+  responded Boolean  @default(false)
+  response  String   @default("")
+  createdAt DateTime @default(now())
+}
+
+model Subcribers {
+  id    Int    @id @unique @default(autoincrement())
+  email String
+}
