@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import "react-toastify/dist/ReactToastify.css";
 import Footer from "@/components/ui/footer";
+import { ToastContainer } from "react-toastify";
 
 export default function DefaultLayout({
   children,
@@ -23,6 +23,7 @@ export default function DefaultLayout({
 
   return (
     <>
+    <ToastContainer position="top-right" />
       <main className="grow">{children}</main>
       <Footer />
     </>

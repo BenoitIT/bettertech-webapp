@@ -1,7 +1,8 @@
+"use server";
 import Link from "next/link";
-import Messages from "../(pageContents)/message";
+import Profile from "../(pageContents)/profile";
+const Page = async () => {
 
-const Page = () => {
   return (
     <div>
       <div className=" m-4 flex flex-row gap-2 font-semibold text-sm">
@@ -10,7 +11,8 @@ const Page = () => {
         </Link>
         <h2 className="text-emerald-700">Profile</h2>
       </div>
+      <Profile/>
     </div>
   );
-};
+}
 export default Page;

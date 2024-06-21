@@ -1,7 +1,34 @@
 import Link from "next/link";
 import Logo from "./logo";
+import { FormEvent, useState } from "react";
+import { toast } from "react-toastify";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const handleSubscribe = async (e:FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const response = await fetch("/api/subscribers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+      }),
+    });
+    const data = await response.json();
+    if (data.status == 201) {
+      toast.success(data.message);
+      setEmail("")
+      console.log(data)
+    } else if (data.status == 400) {
+      setEmail("")
+      toast.success(data.message);
+      console.log(data)
+    } else {
+      return;
+    }
+  };
   return (
     <footer>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -17,7 +44,7 @@ export default function Footer() {
               >
                 Better Technology Limited,
               </Link>
-              <br/>
+              <br />
               <Link
                 href="/"
                 className="text-gray-600 hover:text-gray-900 hover:underline transition duration-150 ease-in-out"
@@ -140,25 +167,25 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          {/* 5th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
             <h6 className="text-gray-800 font-medium mb-2">Subscribe</h6>
             <p className="text-sm text-gray-600 mb-4">
               Get some updates and articles to your inbox at some point of time.
             </p>
-            <form>
+            <form onSubmit={handleSubscribe}>
               <div className="flex flex-wrap mb-4">
                 <div className="w-full">
-                  <label className="block text-sm sr-only" htmlFor="newsletter">
+                  <label className="block text-sm sr-only" htmlFor="email">
                     Email
                   </label>
                   <div className="relative flex max-w-xs gap-2 flex-col">
                     <input
-                      id="newsletter"
+                      id="email"
                       type="email"
                       className="form-input text-gray-800 px-3 py-[5px] pr-12 text-sm w-full"
                       placeholder="Your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       required
                     />
                     <button
