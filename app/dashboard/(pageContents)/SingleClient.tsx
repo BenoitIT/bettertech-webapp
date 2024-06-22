@@ -1,8 +1,11 @@
 "use client";
 
 import { BasicBtn } from "@/app/(comps)/buttons/button";
+import UpdateClient from "../(components)/modals/updateClient";
+import { useState } from "react";
 
 const ClientDetail = ({ client }: any) => {
+  const [openEditModal, setEditModal] = useState<boolean>(false);
   return (
     <div className="w-full bg-white p-14 rounded-sm">
       <div className="flex justify-between">
@@ -28,9 +31,10 @@ const ClientDetail = ({ client }: any) => {
       </div>
       <div className="flex w-full justify-center items-center h-[100px]">
         <div className="w-[250px] mt-[70px]">
-          <BasicBtn label={"Edit client Info"} onClick={() => {}} />
+          <BasicBtn label={"Edit client Info"} onClick={() =>setEditModal(true)} />
         </div>
       </div>
+      <UpdateClient open={openEditModal} setOpen={setEditModal} currentInfo={client} id={client.id}/>
     </div>
   );
 };

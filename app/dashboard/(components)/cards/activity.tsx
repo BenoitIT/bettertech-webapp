@@ -1,4 +1,9 @@
+"use client"
+import { useState } from "react";
+import EditActivity from "../modals/editActivity";
+
 const Activity = ({ props }: any) => {
+  const [openEditModal, setEditModal] = useState<boolean>(false);
   return (
     <div className="relative flex flex-col bg-clip-border rounded-xl bg-gradient-to-tr from-gray-300 to-gray-4z00 text-gray-900 shadow-md w-full max-w-[20rem] p-8">
       <div className="relative pb-4 m-0 mb-4 overflow-hidden text-center text-gray-900 bg-transparent border-b rounded-none shadow-none bg-clip-border border-white/10">
@@ -45,10 +50,12 @@ const Activity = ({ props }: any) => {
         <button
           className="align-middle  text-center  disabled:pointer-events-none text-xs py-1 px-7 rounded bg-emerald-700 text-white shadow-md shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none block w-full"
           type="button"
+          onClick={()=>setEditModal(true)}
         >
           Edit Activity
         </button>
       </div>
+      <EditActivity open={openEditModal} setOpen={setEditModal} id={props?.id}/>
     </div>
   );
 };
