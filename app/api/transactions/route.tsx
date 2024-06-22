@@ -18,12 +18,13 @@ export const POST = async (req: NextRequest) => {
       const amountTobeEarned = body.quantity * activity.price;
       const transaction = await prisma.transaction.create({
         data: {
-          clientId: body.clientId,
+          clientid: body.clientId,
           actId: body.actId,
           quantity: body.quantity,
           unit: body.unit,
-          amountEarned: amountTobeEarned,
-          doneAt:body.doneAt
+          amountearned: amountTobeEarned,
+          doneAt:body.doneAt,
+          date:body.doneAt
         },
       });
       if (transaction) {
