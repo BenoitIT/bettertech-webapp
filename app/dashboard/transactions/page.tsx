@@ -14,7 +14,7 @@ const Page = async () => {
         clientName: transaction.client?.clientNames,
         activityName: transaction.activity?.activityName,
         price: `RWF ${new Intl.NumberFormat("en-US").format(
-          transaction?.amountEarned
+          transaction?.amountearned
         )}`,
         status: transaction?.status,
       };

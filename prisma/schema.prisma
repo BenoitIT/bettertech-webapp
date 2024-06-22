@@ -45,15 +45,16 @@ model activity {
 
 model transaction {
   id           Int      @id @unique @default(autoincrement())
-  client       Client   @relation(fields: [clientId], references: [id])
+  client       Client   @relation(fields: [clientid], references: [id])
   activity     activity @relation(fields: [actId], references: [id])
-  clientId     Int
+  clientid     Int
   actId        Int
   quantity     Int
   unit         String   @default("")
-  amountEarned Int
+  amountearned Int
   status       String   @default("unpaid")
   doneAt       String
+  date        DateTime
 }
 
 model Messages {
@@ -71,4 +72,5 @@ model Messages {
 model Subcribers {
   id    Int    @id @unique @default(autoincrement())
   email String
+  date  DateTime @default(now())
 }

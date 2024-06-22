@@ -1,8 +1,25 @@
 "use client";
 
 import { BasicBtn } from "@/app/(comps)/buttons/button";
-
+import { useRouter } from "next/navigation";
 const TransactionDetails = ({ transaction }: any) => {
+  const router = useRouter();
+  const handleMarkAsPaid = async () => {
+    try {
+      const response = await fetch(`/api/transactions/${transaction?.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await response.json();
+      if (data.status == 200) {
+        router.refresh();
+      }
+    } catch (err) {
+      return;
+    }
+  };
   return (
     <div className="w-full bg-white p-14 rounded-sm">
       <div className="flex justify-between">
@@ -58,7 +75,7 @@ const TransactionDetails = ({ transaction }: any) => {
         <AppField
           title="Total Amount Earned"
           decription={`RWF ${new Intl.NumberFormat("en-US").format(
-            transaction?.amountEarned
+            transaction?.amountearned
           )}`}
         />
         <AppField
@@ -68,7 +85,11 @@ const TransactionDetails = ({ transaction }: any) => {
       </div>
       <div className="flex w-full justify-center items-center h-[100px]">
         <div className="w-[250px] mt-[70px]">
-          <BasicBtn label={"Mark as Paid"} onClick={() => {}} />
+          <BasicBtn
+            label={transaction?.status == "paid" ? "Paid" : "Mark as Paid"}
+            onClick={handleMarkAsPaid}
+            disabled={transaction?.status == "paid"}
+          />
         </div>
       </div>
     </div>
