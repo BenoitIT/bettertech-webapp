@@ -186,12 +186,12 @@ const Page = () => {
             Year: {new Date().getFullYear()}
           </h4>
         </div>
-        <div className="flex my-4 mx-4 gap-2 flex-col lg:flex-row">
+        <div className="flex my-4 mx-4 pt-2 gap-2 flex-col lg:flex-row">
           <div className="bg-white lg:w-1/2 rounded w-full">
             <h6 className="w-full text-sm font-medium text-gray-700 text-center py-1">
               Cash based
             </h6>
-            <div className=" h-[300px] text-xs">
+            <div className=" h-[300px] text-xs pl-1">
               <Suspense
                 fallback={<Spin size="large" className="text-emerald-700" />}
               >
@@ -203,7 +203,7 @@ const Page = () => {
             <h6 className="w-full text-sm font-medium text-gray-700 text-center py-1">
               Activities and clients
             </h6>
-            <div className="h-[300px] text-xs">
+            <div className="h-[300px] text-xs pl-1">
               <Suspense
                 fallback={<Spin size="large" className="text-emerald-700" />}
               >

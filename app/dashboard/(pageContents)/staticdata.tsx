@@ -8,6 +8,7 @@ export const businessTypes = [
   "Nonprofit Organization",
   "Limited Partnership (LP)",
   "Joint Venture",
+  "Government based",
 ];
 
 export const industries = [
@@ -31,7 +32,6 @@ export const industries = [
   "Agriculture",
   "Energy",
   "Telecommunications",
-  "Government based"
 ];
 
 export const provinces = [
@@ -62,5 +62,3 @@ export const colors = [
   "#ADFF2F",
   "#FF8C00",
 ];
-
-

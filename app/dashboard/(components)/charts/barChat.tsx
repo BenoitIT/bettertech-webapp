@@ -1,5 +1,5 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
-import { Messagesdata, colors } from "../../(pageContents)/staticdata";
+import { colors } from "../../(pageContents)/staticdata";
 import { Message } from "../../interfaces";
 interface PieChartProps {
   messageCount: Message[];
