@@ -33,12 +33,17 @@ const ActivitiesList = ({ activities }: PageProps) => {
         />
         <IconifiedBtn onClick={handleAddActivity} />
       </div>
-
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
-        {activitiesData.map((activity, index) => (
-          <Activity props={activity} key={index} />
-        ))}
-      </div>
+      {activitiesData.length < 1 ? (
+        <div className="h-[100px] w-full flex items-center justify-center font-medium text-sm">
+          No activity has been registered!
+        </div>
+      ) : (
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
+          {activitiesData.map((activity, index) => (
+            <Activity props={activity} key={index} />
+          ))}
+        </div>
+      )}
       <AddNewActivity open={openNewModal} setOpen={setNewModal} />
     </div>
   );
