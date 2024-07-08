@@ -7,7 +7,7 @@ export const PUT = async (request: NextRequest) => {
   try {
     const body = await request.json();
     const sendingAnemail = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "BTech@bettertechnology.tech",
       to: body.emails,
       subject: "Message from Better Technology LTD",
       react: MessageTemplate({

@@ -24,7 +24,7 @@ export const PUT = async (request: NextRequest) => {
           },
         });
         const sendingAnemail = await resend.emails.send({
-          from: "onboarding@resend.dev",
+          from: "BTech@bettertechnology.tech",
           to: body.email,
           subject: "Message from Better Technology LTD",
           react: MessageTemplate({
