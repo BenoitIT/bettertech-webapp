@@ -19,7 +19,7 @@ export default function Services() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 mb-4">Explore Our services</h2>
             <p className=" text-gray-600 text-base leading-7">
-              Better Technology Ltd At Better Technology Ltd, we specialize in
+              At Better Technology Ltd, we specialize in
               delivering comprehensive solutions to meet your clinical and
               environmental needs. Our services include the sale of clinical
               machine spare parts, expert repair and maintenance of clinical
