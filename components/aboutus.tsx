@@ -1,4 +1,3 @@
-
 export default function AboutUs() {
   return (
     <section className="relative" id="about">
@@ -40,15 +39,19 @@ export default function AboutUs() {
         <div className="py-12 md:py-20">
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h2 className="h2 mb-4">Who we are?</h2>
-            <p className="text-base text-gray-600 leading-8" data-aos="zoom-y-out">
-              Better Technology Company (BT Ltd) is Start-up Winning and
-              Networked business firm, our Head office located in Nyarugenge
-              District, Kigali Rwanda unusual at the intersection of Science,
-              Service and Technology. Since 2010, BT ltd works with ambitious
-              Partners on mission-critical projects that prioritize Health
-              safety across Africa. As impact-driven Company, desirable outcomes
-              of our products and services always aspire to be delightful,
-              competitive, professional, and safe for our people and planet.
+            <p
+              className="text-base text-gray-600 leading-8"
+              data-aos="zoom-y-out"
+            >
+              Better Technology Company (BT Ltd) is a start-up and a networked
+              business firm with its head office located in the Nyarugenge
+              District of Kigali, Rwanda, uniquely positioned at the
+              intersection of science, service, and technology. Since 2010, BT
+              Ltd has been working with ambitious partners on mission-critical
+              projects that prioritize health and safety across Africa. As an
+              impact-driven company, we strive for our products and services to
+              be delightful, competitive, professional, and safe for both our
+              people and the planet.
             </p>
           </div>
         </div>

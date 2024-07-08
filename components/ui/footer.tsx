@@ -59,7 +59,7 @@ export default function Footer() {
             <ul className="text-sm">
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href="/#service"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Incineration
@@ -67,7 +67,7 @@ export default function Footer() {
               </li>
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href="/#service"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Machine Reparation
@@ -75,7 +75,7 @@ export default function Footer() {
               </li>
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href="/#service"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Recycling
@@ -89,7 +89,7 @@ export default function Footer() {
             <ul className="text-sm">
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href="/#service"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Machines spareparts
@@ -97,7 +97,7 @@ export default function Footer() {
               </li>
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href="/#service"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Reparation
@@ -105,7 +105,7 @@ export default function Footer() {
               </li>
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href="/#service"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Installation
@@ -113,7 +113,7 @@ export default function Footer() {
               </li>
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href="/#service"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Incineration
@@ -121,7 +121,7 @@ export default function Footer() {
               </li>
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href="/#service"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   RVM
@@ -135,7 +135,7 @@ export default function Footer() {
             <ul className="text-sm">
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href="/#bout"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Home
@@ -143,7 +143,7 @@ export default function Footer() {
               </li>
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href="/#bout"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   About us
@@ -151,7 +151,7 @@ export default function Footer() {
               </li>
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href="/#bout"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Contact us
@@ -159,7 +159,7 @@ export default function Footer() {
               </li>
               <li className="mb-2">
                 <Link
-                  href="/"
+                  href=""
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   Tel:+250788552691
