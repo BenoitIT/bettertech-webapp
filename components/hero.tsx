@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Hero() {
   return (
-    <section className="relative">
+    <section className="relative min-h-screen">
 
       {/* Illustration behind hero content */}
       <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1" aria-hidden="true">
@@ -22,9 +22,9 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-          <div className="text-center pb-12 md:pb-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-screen flex justify-center items-center">
+        <div className="h-fit">
+          <div className="text-center lg:w-[1000px] md:w-[700px] w-[350px]">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Better Technology <span className="bg-clip-text text-transparent bg-emerald-700">Limited.</span></h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Your Trusted Partner in Incineration, Clinical Machines Repair, and RVM Solutions. Let's pave the way towards a cleaner, safer future together.</p>
