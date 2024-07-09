@@ -3,6 +3,7 @@ import Link from "next/link";
 import SubscriptionUpdates from "../(pageContents)/sub";
 
 const Page = async () => {
+  try{
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_URL}/api/subscribers`,
     {
@@ -47,5 +48,8 @@ const Page = async () => {
       </div>
     );
   }
+}catch(err){
+  return
+}
 };
 export default Page;
