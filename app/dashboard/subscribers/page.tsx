@@ -10,8 +10,9 @@ const Page = async () => {
       cache: "no-store",
     }
   );
+  console.log('responsee',response);
   const data = await response.json();
-  if (data.status == 200) {
+  if (data&&data?.status == 200) {
     const emails: string[] = [];
     data.data.map((sub: { id: number; email: string }) =>
       emails.push(sub?.email)
