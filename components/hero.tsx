@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen">
+    <section className="relative min-h-screen w-screen">
 
       {/* Illustration behind hero content */}
       <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1" aria-hidden="true">
@@ -22,7 +22,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-screen flex justify-center items-center">
+      <div className="w-full mx-auto px-[8vw] h-screen flex justify-center items-center">
         <div className="h-fit">
           <div className="text-center lg:w-[1000px] md:w-[700px] w-[350px]">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Better Technology <span className="bg-clip-text text-transparent bg-emerald-700">Limited.</span></h1>
